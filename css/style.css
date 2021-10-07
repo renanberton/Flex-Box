@@ -1,0 +1,451 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+     text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Super Info */
+
+.superinfo-bg {
+    background: #122ab2;
+    color: white;
+}
+
+.superinfo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.superinfo p, .superinfo a {
+    margin: 0 10px 10px 10px;
+
+}
+
+.superinfo a {
+    color:white;
+}
+
+/* Menu */
+
+.menu-bg {
+    background: #2c70ff;
+}
+
+.menu {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+}
+
+.menu-logo a {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a {
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: #122ab2;
+} 
+
+
+/* Introdução */
+
+.introducao {
+    font-size: 3em;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+/* Sobre */
+
+.sobre {
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobre-info {
+    flex: 2 1 300px;
+}
+
+.sobre-info h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+/*O conteúdo do texto, precisa ser 2x maior que as imagens
+por isso o texto é flex 2 e as imgs flex 1 */
+
+.sobre-img {
+    flex: 1 1 160px;
+    margin: 0 10px;
+}
+
+/* Produtos */
+
+.produtos {
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.produtos h1 {
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+    }
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    /* É no container que se define o align-itens, não nos itens */
+}
+
+.produtos-item {
+    flex: 1 1 175px; /* O item irá ter 175px até quebrar pra baixo */
+    /* O 175 px é como se fosse um min-width */
+    margin: 10px;
+}
+
+.produtos-item h2 {
+    font-size: 3em;
+    color: #a4a4a4;
+    background: #f7f7f7;
+    padding: 60px 20px; /*60px pra cima e pra baixo e 20px pros lados, é o que deu o fundo pro h2*/    
+}
+
+.purple {
+    border-top: 8px solid #ae81ff;
+    /* Caso queira definir um flex pra cada item
+    basta usar align-self em cada item sozinho */
+}
+
+.pink {
+    border-top: 8px solid #f9265e;
+}
+
+.blue {
+    border-top: 8px solid #66d9eb;
+}
+
+/* Preços */
+
+.preco {
+    background: #f7f7f7;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.preco-item {
+    flex: 1 1 260px; /*Ou usa-se o flex-basis de 260px ou um min-width de 260px*/
+    border: 4px solid white;
+    padding: 20px; /*Espaço interno de 20px pra todos os lados.*/
+    margin: 10px; /*Espaço externo de 10px pra todos os lados.*/    
+    /*min-width: 260px; Sempre definir min-width de menos de 280px
+    Esse min-width serve para a quebra do flex-box funcionar na 
+    maioria dos browsers.
+    Pode-se também definir flex 1 1 260px para respeitar os min-width de 260px; */
+}
+
+.preco-item h2 {
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span { 
+    max-width: 300px;
+    margin: 20px auto; /*Alinha ao centro*/
+    display: block; /*Tem que definir block, pois o padrão é display inline, e não 
+    se consegue definir estilos no inline*/
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    font-size: 3em;
+}
+
+.preco-item sup { 
+    font-size: 1.5rm; /*Tem que ser rm pois coo o sup é "filho" do span,
+    a medida EM é relativa aos 3em do span, assim o sup não diminui.
+    Com o RM é relativa com a raiz*/
+    }
+
+.preco-item ul {
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25em;
+    line-height: 1;
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.preco-item li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.preco-item li::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #2c70ff;
+    border-radius: 50%;
+}
+
+.preco-item a {
+    max-width: 300px;
+    display: block;
+    margin:20px auto;
+    border: 4px solid;
+    color: #222222;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.25em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+    .preco {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /*Media query para diminuir os paddings ao usar
+    tela de smartphone*/
+
+    .preco .preco-item:nth-child(3) { /*Comando para falar com o item numero 3 do elemento */
+        order: -2; /*O Order apresenta o item com menor order primeiro, 
+        como queremos que o item 3 seja exibido primeiro, coloca-se o menor valor = -3.*/ 
+     }
+
+    .preco .preco-item:nth-child(2) { /*Aqui se define um estilo para o segundo item*/
+        order: -1; /*Aqui se define a ordem do elemento, como queremos que apareça segundo, colocamos o segundo menor valor = -1*/
+             } /* Como o elemento Cobre é order 0, ele aparecerá por ultimo
+             sendo assim, não é necessário definir o order para ele.*/
+
+    }
+
+    /* Qualidade */
+
+    .qualidade {
+        max-width: 960px;
+        margin: 60px auto; /* 60 px pra cima (top) e auto pra centralizar horizontalmente. */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .qualidade-item {
+        flex: 1 1 300px; /*Min-width: 300px - flex basis. */
+        margin: 20px 10px;
+    }
+
+    .qualidade-item h2 {
+        font-size: 2.25em;
+        color: #a4a4a4;
+        margin-bottom: 20px;
+    }
+
+    .qualidade-item h2::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 30px;
+        margin-right: 10px;
+        background: blue;
+    }
+
+    /*Poderia ser feito desta forma, porém daria mais trabalho para pegar
+    e fazer um por um. 
+    .qualidade-item:nth-of-type(3) h2::before {
+        background: #ae81ff;
+    nth-of-type(3) - Isso representa que queremos estilizar o elemento
+    3 do mesmo tipo, falar com o h2::before e fazer o traço com a cor #ae81ff;
+    }
+
+    */
+
+    /*Faremos dessa forma : */
+
+    .qualidade-item:nth-of-type(3n+1) h2::before {
+        background: #ae81ff;
+
+    /* Dessa maneira, continua-se estilizando o item 1
+    E o 3n quer dizer que depois do 1, queremos definir
+    estilo para o 3o. item após o 1 */
+    }
+
+    .qualidade-item:nth-of-type(3n+2) h2::before {
+        background: #f9265e;
+    
+        /* Nesse caso, escolhemos um bg para o 2o item
+        E apartir do 2o item o 3o item também tera
+        seu bg estilizado */
+    }
+
+    .qualidade-item:nth-of-type(3n+3) h2::before {
+        background: #66d9eb;
+
+        /* No ultimo caso, escolhemos um bg para o 3o item
+        E apartir do 3o item também escolhemos um bg
+        para o 3o item apartir do 3. */
+    }
+
+    .qualidade-item p {
+        font-size: 1.25em;
+        line-height: 1.4;
+        color: #7c7c7c;
+    }
+
+    /* News Letter */
+    /* Iremos dar cor para o bg na tela toda
+    e manter os elementos dentro do container */
+
+    .newsletter {
+        background: #f7f7f7;
+        padding: 60px calc((100% - 960px) / 2);
+        /* No padding definimos 60px pra cima e pra baixo
+        no width queremos que preencha 100% - 960px do container
+        dividido por 2, para que seja possivel estilizar
+        o bg com cor, e manter os elementos dentro do container. */
+        /* Também pode ser usado para eliminar o container
+        de div dentro de div de container. */
+        /* Esse calc é igual ao auto*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .newsletter-info {
+        flex: 1 1 240px;
+        margin: 0 10px;
+    }
+
+    .newsletter-info h1 {
+        font-size: 3em;
+        color: #a4a4a4;
+    }
+
+    .newsletter-info p {
+        font-size: 1.25em;
+        font-style: italic;
+        max-width: 230px; /* Para quebrar o texto*/
+        color: #7c7c7c;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form {
+        flex: 2 1 260px;
+        margin: 0 10px;
+        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+        flex: 3 1 200px;
+        font-size: 1.25em;
+        color: #7c7c7c;
+        font-style: italic;
+        font-family: "Nunito", Helvetica, Arial, sans-serif;
+        border: 4px solid #2c70ff;
+        background: transparent;
+        padding: 15px 10px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .newsletter-form button {
+        flex: 1 1 240px;
+        font-family: "Nunito", Helvetica, Arial, sans-serif;
+        font-size: 2.25em;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #2c70ff;
+        color: white;
+        margin: 0;
+        cursor: pointer;
+        border: 0;
+        padding: 15px 10px;
+    }
+    @media (max-width: 600px) {
+        .newsletter-form button {
+        font-size: 1.5em;
+        }
+    }
+    
+    .footer {
+    height: 200px;
+    display: flex;
+    background: #2c70ff;
+    align-items: center;
+    }
+
+.footer p {
+    flex:1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2;
+}
