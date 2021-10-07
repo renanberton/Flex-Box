@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <title>Flex-Box</title>
+</head>
+<body>
+  <!-- Define a habilidade de um item crescer. -->
+  <!-- O valor padrão é 0, assim o item ocupa um tamanho -->
+  <!-- Máximo relacionado ao conteúdo interno deles ou ao width definido -->
+  <h1>Flex-Grow: 0</h1>
+  <p>Define a habilidade de um item crescer. <br>
+    O valor padrão é 0, assim o item ocupa um tamanho máximo <br>
+    relacionado ao conteúdo interno deles ou ao width definido. <br>
+    Caso o conteúdo dos itens forem maior que o container, ele quebra pra fora do container.
+  </p>
+  <section class="container">
+    <div class="item grow0">1</div>
+    <div class="item grow0">2</div>
+    <div class="item grow0">3</div>
+  </section>
+
+  <!-- Define a habilidade de um item crescer. -->
+  <!-- Com o grow: 1, os itens irão tentar ocupar o máximo de espaço do container. -->
+  <h1>Flex-Grow: 1</h1>
+  <p>Basta definir um número.<br>
+     Os itens irão ocupar o máximo do container.  </p>
+  <section class="container">
+    <div class="item grow1">1</div>
+    <div class="item grow1">2</div>
+    <div class="item grow1">3</div>
+  </section>
+
+  <!-- Define a habilidade de um item crescer. -->
+  <!-- Com o grow: 1, os itens irão tentar ocupar o máximo de espaço do container. -->
+  <!-- Se todos os itens da linha forem flex grow:2, eles tem o mesmo tamanho de crescimento proporcional. -->
+  <h1>Flex-Grow: 2</h1>
+  <p>Basta definir um número.<br>
+     Os itens irão ocupar o máximo do container.  </p>
+  <section class="container column">
+    <div class="item grow2">1</div>
+    <div class="item grow2">2</div>
+    <div class="item grow2">3</div>
+  </section>
+
+  <!-- Define a habilidade de um item crescer. -->
+  <!-- Caso algum item tenha o seu conteúdo maior que os outros, 
+    sua box ficará maior também. -->
+  <h1>Flex-Grow: 1 // Conteúdo Largo</h1>
+  <p>Basta definir um número.<br>
+     Os itens irão crescer de acordo com o seu conteúdo <br>
+     Caso tenha um conteúdo maior em algum item, ele ficará maior em relação aos outros.  </p>
+  <section class="container">
+    <div class="item grow1">1</div>
+    <div class="item grow1">TestandoTestando2</div>
+    <div class="item grow1">3</div>
+  </section>
+
+
+  <!-- Define a habilidade de um item crescer. -->
+  <!-- Caso algum item tenha o seu conteúdo maior que os outros, 
+    sua box ficará maior em relação aos outros -->
+  <h1>Flex-Grow: Misturado</h1>
+  <p>Cada item tem um tamanho de grow.<br>
+     Os itens irão crescer de acordo com o grow definidos <br>
+  </p>
+  <section class="container">
+    <div class="item grow0">1</div>
+    <div class="item grow1">2</div>
+    <div class="item grow2">3</div>
+  </section>
+</body>
+</html>

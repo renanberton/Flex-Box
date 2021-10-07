@@ -1,0 +1,49 @@
+.container {
+    max-width: 390px;
+	height: 300px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+	flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+p {
+    text-align: center;
+    font-size: 22px;
+}
+.item {
+    margin: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.stretch {
+    align-content: stretch;
+}
+
+.flex-start {
+    align-content: flex-start;
+}
+
+.flex-end {
+    align-content: flex-end;
+}
+
+.center {
+    align-content: center;
+}
+
+.space-between {
+    align-content: space-between;
+}
+
+.space-around {
+    align-content: space-around;
+}

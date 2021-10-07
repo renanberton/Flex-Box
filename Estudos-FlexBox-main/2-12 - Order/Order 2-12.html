@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <title>Flex-Box</title>
+</head>
+<body>
+  <!-- Order:0 - É o valor padrão se nada for definido.
+  A ordem dos itens será a apresentada no HTML. -->
+    <h1>Order: 0</h1>
+    <p>Valor padrão se nada for definido.<br>
+    A ordem dos itens será a ordem apresentada no HTML.</p>
+<section class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</section>
+
+  <!-- Order: Numero para modificar a ordem.-->
+  <h1>Order: Números</h1>
+  <p>Basta especificar a order que deseja ser apresentada</p>
+  <section class="container">
+    <div class="item order2">1</div>
+    <div class="item order4">2</div>
+    <div class="item order1">3</div>
+    <div class="item order3">4</div>
+  </section>
+
+
+  <!-- Order:Negativo -  -->
+  <h1>Order: Negativo; / flex-grow</h1>
+  <p>Um Order negativo ex: order:-1, vem primeiro <br>
+  que um order:0, pois o -1 é menor que 0.</p>
+  <section class="container">
+    <div class="item order2 flex-grow">1</div>
+    <div class="item order-1 flex-grow">2</div>
+    <div class="item order1 flex-grow">3</div>
+    <div class="item order3 flex-grow">4</div>
+  </section>
+  <!-- Order:Negativo -  -->
+  <h1>Order: Valores Iguais; / Grow / Column</h1>
+  <p>Quando itens tiverem o mesmo order definido<br>
+  O Order seguirá a 2ª ordem, que é a apresentada no HTML.</p>
+  <section class="container column">
+	  <div class="item order2 flex-grow">1</div>
+	  <div class="item order2 flex-grow">2</div>
+	  <div class="item order1 flex-grow">3</div>
+	  <div class="item order1 flex-grow">4</div>
+  </section>
+
+  <!-- Order: valores iguais e negativos
+  Caso apareça itens com order igual o código
+  seguirá a ordem apresentada no html.
+  Valores negativos vem antes do 0 -->
+  <h1>Order: valores iguais; / grow / column</h1>
+  <p>Números negativos vem antes do 0 <br>
+  Caso tenha itens com order igual, o código <br>
+  seguirá a ordem apresentada no html.</r></p>
+  <section class="container column">
+	  <div class="item flex-grow">1</div>
+	  <div class="item order2 flex-grow">2</div>
+	  <div class="item flex-grow">3</div>
+	  <div class="item order-1 flex-grow">4</div>
+  </section>
+</body>
+</html>

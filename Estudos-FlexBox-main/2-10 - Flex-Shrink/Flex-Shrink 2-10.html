@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <title>Flex-Box</title>
+</head>
+<body>
+
+<!-- Valor padrão, permite que os itens tenham 
+os seus tamanhos reduzidos (seja ele definido por width ou flex-basis)
+para caber no container. -->
+<h1>Flex-Shrink:1</h1>
+<p>Valor padrão, permite que os itens tenham <br>
+os seus tamanhos reduzidos (seja ele definido por width ou flex-basis) <br>
+para caber no container.</p>
+    <section class="container">
+        <div class="item shrink-1">1</div>
+        <div class="item shrink-1">2</div>
+        <div class="item shrink-1">3</div>
+        <div class="item shrink-1">4</div>
+    </section>
+
+    <!-- Valor padrão, permite que os itens tenham 
+    os seus tamanhos reduzidos (seja ele definido por width ou flex-basis)
+    para caber no container. -->    
+    <!-- Como o flex-basis é auto, o espaço entre o conteúdo e a borda, 
+        são os mesmos para todos -->
+    <h1>Flex-Shrink:1 // Conteúdo Diferente</h1>
+    <p>Valor padrão, permite que os itens tenham <br>
+    os seus tamanhos reduzidos (seja ele definido por width ou flex-basis) <br>
+    para caber no container. <br>
+    E o flex-item que tiver maior conteudo, cresce proporcionalmente, pois seu conteúdo é maior.</p>
+    <section class="container">
+        <div class="item shrink-1">1</div>
+        <div class="item shrink-1">Teste 2</div>
+        <div class="item shrink-1">Oi 3</div>
+        <div class="item shrink-1">4</div>
+    </section>
+
+    <!-- Quando o conteúdo cabe no container, o flex-shrink não influencia. -->
+    <h1>Flex-Shrink:misturado // Conteúdo Diferente</h1>
+    <p>Como o conteúdo cabe no container, o Flex-Shrink em nada influencia.</p>
+    <section class="container">
+        <div class="item shrink-1">1</div>
+        <div class="item shrink-1">Teste 2</div>
+        <div class="item shrink-3">Oi 3</div>
+        <div class="item shrink-3">4</div>
+    </section>
+
+    <!-- Como o conteudo não cabe no container, não sobra nenhum espaço para o elemento
+    Então o elemento fica colado no na borda -->
+    <!-- Se o Shrink fosse 0, ele não quebraria, pois não se importa mais em diminuir os itens -->
+    <h1>Flex-Shrink: 1; // Conteúdo maior que o container</h1>
+    <p>Como o conteúdo não cabe no container, não sobra nenhum espaço dentro do elemento. <br>
+    O elemento fica colado na borda. <br>
+    Ele diminui o máximo seu conteúdo interno para tentar caber no container.</p>
+    <section class="container">
+	    <div class="item shrink-1">TesteTesteTesteTeste</div>
+	    <div class="item shrink-1">TesteTesteTeste 2</div>
+	    <div class="item shrink-1">Oi 3</div>
+	    <div class="item shrink-1">4</div>
+    </section>
+
+    <!-- Como o conteudo não cabe no container, não sobra nenhum espaço para o elemento
+    Então o elemento fica colado no na borda -->
+    <!-- Se o Shrink fosse 0, ele não quebraria, pois não se importa mais em diminuir os itens -->
+    <h1>Flex-Shrink: misturado; // Conteúdo maior que o container</h1>
+    <p>Como o conteúdo não cabe no container, não sobra nenhum espaço dentro do elemento. <br>
+        O elemento fica colado na borda. <br>
+        Ele diminui o máximo seu conteúdo interno para tentar caber no container.<br>
+    Mesmo com o Shrink 1 e 3 definidos.</p>
+    <section class="container">
+	    <div class="item shrink-1">TesteTesteTesteTeste</div>
+	    <div class="item shrink-1">TesteTesteTeste 2</div>
+	    <div class="item shrink-3">Oi 3</div>
+	    <div class="item shrink-3">4</div>
+    </section>
+
+
+    <!-- O elemento não segue os 150px de flex-basis, pois não cabe no container -->
+    <h1>Flex-Shrink: 1; / flex-basis: valor;</h1>
+    <p>O elemento não segue os 150px de flex-basis, pois não cabe no container. <br>
+    E o elemento diminui o máximo o espaço dentro do seu conteúdo para caber</p>
+    <section class="container">
+	    <div class="item shrink-1-basis">TesteTesteTesteTeste</div>
+	    <div class="item shrink-1-basis">TesteTesteTeste 2</div>
+	    <div class="item shrink-1-basis">Oi 3</div>
+	    <div class="item shrink-1-basis">4</div>
+    </section>
+
+    <!-- Como o Shrink é 0, os elementos não diminuem e seguem os 150px do flex-basis -->
+    <h1>Flex-Shrink: 0; / flex-basis: valor;</h1>
+    <p>Como o shrink é 0, os elementos não diminuem, e seguem os 150px do flex-basis</p>
+    <section class="container">
+	    <div class="item shrink-0-basis">TesteTesteTesteTeste</div>
+	    <div class="item shrink-0-basis">TesteTesteTeste 2</div>
+	    <div class="item shrink-0-basis">Oi 3</div>
+	    <div class="item shrink-0-basis">4</div>
+    </section>
+
+    <!-- Aqui como tem o flex-wrap definido, ele quebra os itens que não cabem no container
+    pra baixo -->
+    <h1>Flex-Shrink: 0; / flex-basis: valor; / wrap</h1>
+    <p>Como tem o flex-wrap definido, ele irá quebrar os itens com conteúdo maior,
+         pra baixo. <br>
+    </p>
+    <section class="container flex-wrap">
+	    <div class="item shrink-0-basis">TesteTesteTesteTeste</div>
+	    <div class="item shrink-0-basis">TesteTesteTeste 2</div>
+	    <div class="item shrink-0-basis">Oi 3</div>
+	    <div class="item shrink-0-basis">4</div>
+    </section>
+
+    <!-- Os itens com Shrink 3, diminuirão 3x o tamanho dos itens com shrink 1 -->
+    <h1>Flex-Shrink: misturado; / flex-basis: valor;</h1>
+    <p>Os itens com shrink 3 diminuem 3x o tamanho dos itens com shrink 1</p>
+    <section class="container">
+	    <div class="item shrink-1-basis">1</div>
+	    <div class="item shrink-1-basis">Teste 2</div>
+	    <div class="item shrink-3-basis">3</div>
+	    <div class="item shrink-3-basis">4</div>
+    </section>
+
+    <!-- O item segue o flex-basis 150, e quebra pois está com flex-wrap -->
+    <!-- Caso não se defina flex-basis, o item seguirá o tamanho de acordo 
+    com seu conteúdo -->
+    <h1>Flex-Shrink: misturado; / flex-basis: valor; / wrap</h1>
+    <p>Aqui os itens seguem o Flex-basis 150px, e quebram pra baixo <br>
+    Não diminui, pois todos cabem</p>
+    <section class="container flex-wrap">
+	    <div class="item shrink-1-basis">1</div>
+	    <div class="item shrink-1-basis">Teste 2</div>
+	    <div class="item shrink-3-basis">3</div>
+	    <div class="item shrink-3-basis">4</div>
+    </section>
+</body>
+</html>
